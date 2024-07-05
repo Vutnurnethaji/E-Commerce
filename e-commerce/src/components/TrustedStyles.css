@@ -1,0 +1,22 @@
+.trusted{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--backgroundColor);
+
+    .trustedBottom{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+
+        img{
+            height: 50px;
+            width: 50px;
+        }
+    }
+}
