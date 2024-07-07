@@ -7,6 +7,7 @@ import Contact from './pages/Contact';
 import Cart from './pages/Cart';
 import Error from './pages/Error';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path='/cart' element={<Cart />}/>
             <Route path='*' element={<Error />}/>
         </Routes>
+        <Footer />
     </BrowserRouter>
   );
 }
