@@ -2,83 +2,89 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 45%;
+  width: 37%;
 
-  .nav-total{
+  .nav-total {
     display: flex;
     width: 100%;
-    .nav-top{
+    justify-content: space-evenly;
+    align-items: center;
+    .nav-top {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 100%;
+      span{
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
-        width: 100%;
-       a {
-           text-decoration: none;
-         }
-       
-         .nav-count {
-           height: 20px;
-           width: 20px;
-           background-color: blueviolet;
-           border-radius: 50%;
-           position: relative;
-           right: 10px;
-           bottom: 18px;
-         }
-       
-     }
-     .nav-bottom{
-       display: none;
-     }
+      }
+      a {
+        text-decoration: none;
+      }
+
+      .nav-count {
+        height: 20px;
+        width: 20px;
+        background-color: blueviolet;
+        border-radius: 50%;
+        position: relative;
+        right: 10px;
+        bottom: 15px;
+      }
+    }
+    .nav-bottom {
+      display: none;
+    }
   }
 }
 
 @media (width <=768px) {
   .nav {
     width: 10%;
-     .nav-total{
-        .nav-top{
-            display: none;
-        }
-    
-        .activeTop{
-            height: 100vh;
-            width: 100vw;
-            background-color: azure;
-            position: fixed;
-            top: 0;
-            left: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-        }
-        /* .nav-top {
+    .nav-total {
+      .nav-top {
+        display: none;
+      }
+
+      .activeTop {
+        height: 100vh;
+        width: 100vw;
+        background-color: azure;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+      /* .nav-top {
          
         } */
-    
-        .nav-bottom {
-            display: block;
-    
-            .menuClose{
-               display: none;
-            }
-            
-            .menuOpen{
-                display: block;
-            }
-            
-            .activeM{
-                display: block;
-                position: fixed;
-                top: 26px;
-                right: 26px;
-            }
-            .menuOpenClose{
-                display: none;
-            }
+
+      .nav-bottom {
+        display: block;
+
+        .menuClose {
+          display: none;
         }
-     }
+
+        .menuOpen {
+          display: block;
+        }
+
+        .activeM {
+          display: block;
+          position: fixed;
+          top: 26px;
+          right: 26px;
+        }
+        .menuOpenClose {
+          display: none;
+        }
+      }
+    }
   }
 }

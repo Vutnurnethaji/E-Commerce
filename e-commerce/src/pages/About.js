@@ -3,11 +3,12 @@ import Hero from '../components/Hero'
 import { appContext } from '../context/productContext'
 
 const About = () => {
-  const {name}=useContext(appContext)
+  const {state, dispatch}=useContext(appContext)
+  console.log(state)
   return (
     <>
        <Hero name='Amazon Ecommerce'/>
-       {name}
+       
     </>
   )
 }

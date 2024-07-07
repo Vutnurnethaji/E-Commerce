@@ -1,0 +1,22 @@
+a{
+    height: 100%;
+    width: 30%;
+}
+.card{
+    height: 100%;
+    width: 100%;
+
+    img{
+        height: 100%;
+        width: 100%;
+    }
+
+    .caption{
+        position: relative;
+    }
+
+    .cardBottom{
+        display: flex;
+        justify-content: space-between;
+    }
+}

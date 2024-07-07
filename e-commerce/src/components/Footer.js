@@ -13,7 +13,7 @@ const Footer = () => {
                 <h4>Ready to get started</h4>
                 <h4>Talk to us today</h4>
             </div>
-            <div style={{width:'30%', display:'flex', justifyContent:'flex-end'}}>
+            <div style={{width:'38%', display:'flex', justifyContent:'flex-end'}}>
                 <NavLink to={'/contact'}>
                     <button>Get Started</button>
                 </NavLink>
