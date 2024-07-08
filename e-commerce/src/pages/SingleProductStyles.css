@@ -1,0 +1,23 @@
+.singleProMain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 60%;
+    margin: auto;
+    margin-top: 30px;
+
+    .singleProMainLeft, .singleProMainRight{
+        width: 45%;
+    }
+    .singleProMainRight{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .singleProMainLeft{
+        display: flex;
+        gap: 10px;
+    }
+    
+}

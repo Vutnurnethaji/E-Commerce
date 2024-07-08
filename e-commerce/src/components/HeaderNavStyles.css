@@ -1,0 +1,8 @@
+.headerNav{
+    background-color: var(--backgroundColor);
+    padding-left: 25px;
+
+    span{
+        text-transform: uppercase;
+    }
+}

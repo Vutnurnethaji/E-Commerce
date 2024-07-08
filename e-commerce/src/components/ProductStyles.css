@@ -1,22 +1,49 @@
 a{
     height: 100%;
     width: 30%;
+    text-decoration: none;
+    color: black;
 }
 .card{
     height: 100%;
     width: 100%;
 
-    img{
+    figure{
+        height: 80%;
+        width: 100%;
+    }
+    .imgDiv{
         height: 100%;
         width: 100%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 1.5s ease-in-out;
+    }
+    img{
+        height: 90%;
+        width: 90%;
+    }
+    img:hover{
+        transform: scale(1.05);
     }
 
     .caption{
         position: relative;
+        background-color: azure;
+        bottom: 147px;
+        left: 180px;
+        display: flex;
+        width: fit-content;
+        padding: 1px 3px 1px 3px;
+        border-radius: 5px;
     }
 
     .cardBottom{
         display: flex;
         justify-content: space-between;
+        height: 20%;
+        margin-top: 5px;
     }
 }

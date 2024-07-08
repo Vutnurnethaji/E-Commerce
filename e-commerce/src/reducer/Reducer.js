@@ -24,7 +24,27 @@ export const reducer = (state, action) => {
         isLoading: true,
       };
 
+    case "API_SUCCESS_SINGLE":
+      return {
+        ...state,
+        isSingleLoading: false,
+        singleProduct: action.payload,
+      };
+
+    case "API_FAILURE_SINGLE":
+      return {
+        ...state,
+        isSingleLoading: false,
+        isSinglError: action.payload,
+      };
+
+    case "API_LOADING":
+      return {
+        ...state,
+        isSingleLoading: true,
+      };
+
     default:
-        return state
+      return state;
   }
 };
