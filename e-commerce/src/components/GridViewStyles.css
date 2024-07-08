@@ -1,0 +1,52 @@
+.gridAnchor {
+  text-decoration: none;
+  width: 30%;
+  height: 180px;
+
+  .gridCard {
+    height: 100%;
+    width: 100%;
+
+    figure {
+      height: 80%;
+      width: 100%;
+
+      .imgDivGrid{
+        height: 100%;
+        width: 100%;
+        background-color: rgb(179, 170, 170);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 1.5s ease-in-out;
+      }
+
+      figCaption {
+        position: relative;
+        background-color: rgb(235, 245, 245);
+        bottom: 120px;
+        left: 140px;
+        display: flex;
+        width: fit-content;
+        padding: 1px 3px 1px 3px;
+        border-radius: 5px;
+      }
+
+      img {
+        height: 90%;
+        width: 90%;
+        object-fit: cover;
+      }
+      img:hover{
+        transform: scale(1.05);
+    }
+    }
+
+    .cardBottomGrid{
+        display: flex;
+        justify-content: space-between;
+        height: 20%;
+        margin-top: 5px;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.counterButton{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    .counterSpan{
+        display: flex;
+        width: 30%;
+        flex-grow: 1;
+
+        button{
+            flex: 1;
+            border: none;
+            font-size: larger;
+        }
+        p{
+            flex: 2;
+            text-align: center;
+        }
+    }
+
+    a{
+        width: 30%;
+        text-decoration: none;
+
+        button{
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 10px;
+            background-color: blue;
+            color: white;
+        }
+    }
+}

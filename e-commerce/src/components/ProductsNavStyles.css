@@ -1,0 +1,12 @@
+.productsNavTop{
+
+    .navButton{
+        padding: 5px;
+    }
+
+    .active{
+        background-color: black;
+        color: white;
+    }
+}
+

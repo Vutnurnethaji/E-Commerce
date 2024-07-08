@@ -19,5 +19,21 @@
         display: flex;
         gap: 10px;
     }
+
+    .colorButton{
+        opacity: 0.5;
+
+        svg{
+            visibility: hidden;
+        }
+    }
+
+    .activeButton{
+        opacity: 1;
+
+        svg{
+            visibility:visible;
+        }
+    }
     
 }

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { appContext } from '../context/productContext'
 import { useParams } from 'react-router-dom';
 import HeaderNav from '../components/HeaderNav';
@@ -11,6 +11,7 @@ import './SingleProductStyles.css'
 import Image from '../components/Image';
 import Star from '../components/Star';
 import { FaCheck } from "react-icons/fa6";
+import CounterButton from '../components/CounterButton';
 
 
 const API='https://api.pujakaitem.com/api/products'
@@ -21,7 +22,17 @@ const SingleProduct = () => {
 
   const{id}=useParams();
 
-  const {id:alias, name, company, price, description, category, stock, stars, reviews, image, colors}=state.singleProduct
+  const {id:alias, name, company, price, description, category, stock, stars, reviews, image, colors=['']}=state.singleProduct;
+
+   const initialColor= colors.length>0 ? colors[0]: '';
+   const [pcolor, setPcolor]=useState(initialColor)
+    useEffect(()=>{
+      if(colors.length > 0){
+        setPcolor(colors[0])
+      }
+    },[colors])
+  
+     console.log(pcolor, 'colorPicker')
 
   useEffect(()=>{
     getSingleProduct(`${API}/?id=${id}`)
@@ -38,10 +49,10 @@ const SingleProduct = () => {
                 <Image img={image} />
              </div>
             <div className='singleProMainRight'>
-                <p>{reviews}</p>
+                <b>{name}</b>
                 <Star stars={stars} reviews={reviews}/>
                 <span>MRP:<del><FormatPrice price={price+250000}/></del></span>
-                <p>Deal of the Day: {price}</p>
+                <p><span style={{color:'blueviolet'}}>Deal of the Day:</span> {price}</p>
                 <p>{description}</p>
                 <div style={{display:'flex',alignItems:'center', justifyContent:'space-evenly', gap:'5px'}}>
                   <div>
@@ -68,12 +79,15 @@ const SingleProduct = () => {
                 <hr style={{color:'black', border:'1px solid black'}}/>
                 <div style={{display:'flex', gap:'5px'}}>
                 {
-                   colors && colors.map((color)=>{
-                      return <button style={{backgroundColor:color, border:'0', borderRadius:'50%'}}>
-                        <FaCheck style={{color:'white'}}/>
+                   colors && colors.map((color,i)=>{
+                      return <button className={pcolor===color ? 'colorButton activeButton' : 'colorButton'} style={{backgroundColor:color, border:'0', borderRadius:'50%'}} key={i} onClick={()=>setPcolor(color)}>
+                        <FaCheck style={{color:'white'}} />
                         </button>
                   })
                  }
+                </div>
+                <div>
+                   <CounterButton stock={stock}/>
                 </div>
             </div>
         </div>

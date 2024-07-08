@@ -1,0 +1,55 @@
+.listView{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+
+    .listViewMain{
+        display: flex;
+        height: 180px;
+        width: 100%;
+        justify-content: space-around;
+        border: 1px solid gray;
+
+
+        .listViewLeft{
+            height: 100%;
+            width: 42%;
+            background-color: gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img{
+               height: 90%;
+               width: 90%;
+               transition: transform 0.5s ease-in-out;
+            }
+            img:hover{
+                transform: scale(1.05);
+            }
+        }
+        .listViewRight{
+            height: 100%;
+            width: 48%;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            button{
+                padding: 10px;
+                border: none;
+                border-radius: 10px;
+                color: white;
+                background-color: blue;
+                transition: transform 0.5s ease-in-out;
+            }
+            button:hover{
+                transform: scale(1.05);
+            }
+        }
+
+    }
+}

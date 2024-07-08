@@ -1,0 +1,34 @@
+.products{
+    display: flex;
+    width: 80%;
+    height: auto;
+    justify-content: center;
+    gap: 10px;
+    margin: auto;
+
+    .productsLeft{
+        width: 28%;
+        height: 100%;
+    }
+    .productsRight{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 70%;
+        height: 100%;
+         .prodRightTop{
+            height: 15%;
+            width: 100%;
+         }
+        .prodRightBottom{
+            height: 80%;
+            width: 100%;
+        }
+        .prodRightTop{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0px;
+        }
+    }
+
+}
