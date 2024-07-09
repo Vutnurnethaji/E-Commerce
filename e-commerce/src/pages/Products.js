@@ -12,7 +12,7 @@ const Products = () => {
   return (
     <div className='products'>
         <div className='productsLeft'>
-            <ProductsFilter />
+            <ProductsFilter/>
         </div>
         <div className='productsRight'>
              <div className='prodRightTop'>
