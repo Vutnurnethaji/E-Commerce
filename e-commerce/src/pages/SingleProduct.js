@@ -31,14 +31,11 @@ const SingleProduct = () => {
         setPcolor(colors[0])
       }
     },[colors])
-  
-     console.log(pcolor, 'colorPicker')
+
 
   useEffect(()=>{
     getSingleProduct(`${API}/?id=${id}`)
   },[])
-
-  console.log(state.singleProduct)
   return (
     <div className='singleProduct'>
         <div className='singleProTop'>
@@ -87,7 +84,7 @@ const SingleProduct = () => {
                  }
                 </div>
                 <div>
-                   <CounterButton stock={stock}/>
+                   <CounterButton stock={stock} singleProduct={state.singleProduct} color={pcolor}/>
                 </div>
             </div>
         </div>

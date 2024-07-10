@@ -1,0 +1,10 @@
+.counterSpan{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    button{
+        border: none;
+        background-color: inherit;
+        font-size: 25px;
+    }
+}

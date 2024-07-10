@@ -1,11 +1,15 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./NavStyles.css";
 import { FiShoppingCart } from "react-icons/fi";
 import { CgMenu, CgClose } from "react-icons/cg";
+import { cartContext } from "../context/cartContext";
 
 const Nav = () => {
-    const [screen, setScreen]=useState(false);
+
+   const{state}=useContext(cartContext);
+   const [screen, setScreen]=useState(false);
+  
 
     const toggle=()=>{
         setScreen(!screen)
@@ -21,7 +25,7 @@ const Nav = () => {
           <NavLink to={"/cart"}>Cart</NavLink>
           <span className="navCart">
             <FiShoppingCart style={{ fontSize: 25 }} />
-            <span className="nav-count">10</span>
+            <span className="nav-count">{state.totalItems}</span>
           </span>
         </div>
         <div className="nav-bottom">
